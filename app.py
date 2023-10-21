@@ -96,7 +96,7 @@ def handle_message(event):
         print(checkbox_template)
         # 回覆使用者訊息，使用 Buttons Template 提供選項
         line_bot_api.reply_message(event.reply_token, checkbox_template) """
-    elif str(msg).strip() == "功能" or  str(msg).strip() == "打卡" or str(msg).strip() == "卡景點" or str(msg).strip() == "集點" or str(msg).strip() == "集點卡" or str(msg).strip() == "現在集點":
+    elif str(msg).strip() == "功能" or  str(msg).strip() == "打卡" or str(msg).strip() == "卡景點" or str(msg).strip() == "集點" or str(msg).strip() == "集點卡" or str(msg).strip() == "現在集點" or  str(msg).strip() == "探索地圖" or  str(msg).strip() == "地圖":
         pass
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="踏竹還沒有這個功能唷!\n趕快聯繫我們許願吧!"))
