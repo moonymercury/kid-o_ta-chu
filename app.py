@@ -96,7 +96,8 @@ def handle_message(event):
         print(checkbox_template)
         # 回覆使用者訊息，使用 Buttons Template 提供選項
         line_bot_api.reply_message(event.reply_token, checkbox_template) """
-
+    elif str(msg).strip() == "功能" :
+        pass
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="踏竹還沒有這個功能唷!\n\
                                                                       趕快聯繫我們許願吧!"))
