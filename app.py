@@ -82,8 +82,7 @@ def handle_message(event):
         print(random_item) #test
         # 現在您有了隨機選擇的項目，可以使用它進一步處理或傳送給使用者
         print("隨機選擇的項目：", random_item['name'], random_item['link'])
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"想不到要去哪裡嗎?\n建議您可以前往「{random_item['name']}」品嚐美食!\n\
-                                                                      {random_item['link']}\n\n另外，用餐並留下評論便可以集點喔~\n快來試試吧！"))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"想不到要去哪裡嗎?\n建議您可以前往「{random_item['name']}」品嚐美食!\n\n{random_item['link']}\n\n另外，用餐並留下評論便可以集點喔~\n快來試試吧！"))
    
         """ # 建立 Buttons Template 選單
         checkbox_template = TemplateSendMessage(
