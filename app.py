@@ -19,6 +19,7 @@ import datetime
 import time
 # import json
 import json
+import random
 #======python的函數庫==========
 
 app = Flask(__name__)
