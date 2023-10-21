@@ -99,8 +99,7 @@ def handle_message(event):
     elif str(msg).strip() == "功能" or  str(msg).strip() == "打卡" or str(msg).strip() == "卡景點" or str(msg).strip() == "集點" or str(msg).strip() == "集點卡" or str(msg).strip() == "現在集點":
         pass
     else:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="踏竹還沒有這個功能唷!\n\
-                                                                      趕快聯繫我們許願吧!"))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text="踏竹還沒有這個功能唷!\n趕快聯繫我們許願吧!"))
     return jsonify({"success": True})
 
 """ @handler.add(PostbackEvent)
