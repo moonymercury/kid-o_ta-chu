@@ -75,7 +75,8 @@ def handle_message(event):
         # 將檢索到的資料轉換為 Python 列表
         data = list(cursor)
         print(data) #test
-
+        # 使用時間來生成種子
+        random.seed(int(time.time()))
         # 隨機選擇一個項目
         random_item = random.choice(data)
         print(random_item) #test
