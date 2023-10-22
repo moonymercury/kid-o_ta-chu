@@ -79,14 +79,14 @@ def handle_message(event):
         data = list(cursor)
         data1 = list(cursor1)
         data = data+data1
-        print(data) #test
+        # print(data) #test
         # 使用時間來生成種子
         random.seed(int(time.time()))
         # 隨機選擇一個項目
         random_item = random.choice(data)
-        print(random_item) #test
+        # print(random_item) #test
         # 現在您有了隨機選擇的項目，可以使用它進一步處理或傳送給使用者
-        print("隨機選擇的項目：", random_item['name'], random_item['link'])
+        # print("隨機選擇的項目：", random_item['name'], random_item['link']) #test
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=f"想不到要去哪裡嗎?\n建議您可以前往「{random_item['name']}」!\n\n{random_item['link']}\n\n另外，消費並留下評論便可以集點喔~\n快來試試吧！"))
    
         """ # 建立 Buttons Template 選單
